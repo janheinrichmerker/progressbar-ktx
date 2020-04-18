@@ -37,7 +37,7 @@ class ProgressBarBuilderScope {
             consumer = InternalConsoleProgressBarConsumer(value)
         }
     var unitName: String = ""
-    var unitSize: Long = 0
+    var unitSize: Long = 1
     var showSpeed: Boolean
         get() = speedFormat !== emptyDecimalFormat
         set(value) {
