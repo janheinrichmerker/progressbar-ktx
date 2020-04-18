@@ -7,6 +7,9 @@ import java.text.DecimalFormat
 import java.util.*
 import java.util.stream.BaseStream
 import java.util.stream.Stream
+import kotlin.time.Duration
+import kotlin.time.ExperimentalTime
+import kotlin.time.microseconds
 
 @DslMarker
 annotation class ProgressBarDsl
@@ -22,6 +25,12 @@ class ProgressBarBuilderScope {
     var task: String = ""
     var initialMax: Long = -1
     var updateIntervalMillis: Int = 1000
+    @ExperimentalTime
+    var updateInterval: Duration
+        get() = updateIntervalMillis.microseconds
+        set(value) {
+            updateIntervalMillis = value.inMilliseconds.toInt()
+        }
     var style: ProgressBarStyle = ProgressBarStyle.COLORFUL_UNICODE_BLOCK
     var consumer: ProgressBarConsumer = InternalConsoleProgressBarConsumer()
     var out: PrintStream
