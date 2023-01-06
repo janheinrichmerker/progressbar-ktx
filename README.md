@@ -1,5 +1,5 @@
-[![GitHub Actions](https://img.shields.io/github/workflow/status/reimersoftware/progressbar-ktx/CI?style=flat-square)](https://github.com/reimersoftware/progressbar-ktx/actions?query=workflow%3A"CI")
-[![JitPack](https://img.shields.io/jitpack/v/github/reimersoftware/progressbar-ktx?style=flat-square)](https://jitpack.io/#dev.reimer/progressbar-ktx)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/heinrichreimer/progressbar-ktx/ci.yml?branch=master&style=flat-square)](https://github.com/heinrichreimer/progressbar-ktx/actions/workflows/ci.yml)
+[![JitPack](https://img.shields.io/jitpack/v/github/heinrichreimer/progressbar-ktx?style=flat-square)](https://jitpack.io/#dev.reimer/progressbar-ktx)
 
 # ⏳ progressbar-ktx<sup>[α](#status-α)</sup>
 
