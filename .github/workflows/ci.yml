@@ -1,34 +1,38 @@
-name: "CI"
+name: CI
 
 on: push
 
 jobs:
   build:
-    name: "🏗️ Gradle build"
+    name: 🏗️ Gradle build
     runs-on: ubuntu-latest
     steps:
-      - name: "📥 Check-out"
+      - name: 📥 Check-out
         uses: actions/checkout@v4
-      - name: "🧰 Set up JDK 1.8"
+      - name: 🧰 Install JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 1.8
-      - name: "💪 Grant execute permission for gradlew"
-        run: "chmod +x gradlew"
-      - name: "🏗️ Build with Gradle"
-        run: "./gradlew build"
+          java-version: 17
+          distribution: temurin
+          cache: gradle
+      - name: 💪 Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: 🏗️ Build with Gradle
+        run: ./gradlew build
   test:
     needs: build
-    name: "✅ Gradle test"
+    name: ✅ Gradle test
     runs-on: ubuntu-latest
     steps:
-      - name: "📥 Check-out"
+      - name: 📥 Check-out
         uses: actions/checkout@v4
-      - name: "🧰 Set up JDK 1.8"
+      - name: 🧰 Install JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 1.8
-      - name: "💪 Grant execute permission for gradlew"
-        run: "chmod +x gradlew"
-      - name: "✅ Test with Gradle"
-        run: "./gradlew test"
+          java-version: 17
+          distribution: temurin
+          cache: gradle
+      - name: 💪 Grant execute permission for gradlew
+        run: chmod +x gradlew
+      - name: ✅ Test with Gradle
+        run: ./gradlew test
