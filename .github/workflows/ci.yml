@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
     name: "🏗️ Gradle build"
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: "📥 Check-out"
         uses: actions/checkout@v4
@@ -20,7 +20,7 @@ jobs:
   test:
     needs: build
     name: "✅ Gradle test"
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: "📥 Check-out"
         uses: actions/checkout@v4
