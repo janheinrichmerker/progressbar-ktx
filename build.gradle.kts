@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("me.tongfei:progressbar:0.8.1")
+    implementation("me.tongfei:progressbar:0.10.0")
 }
 
 lateinit var javadocJar: TaskProvider<Jar>
