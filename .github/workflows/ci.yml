@@ -12,7 +12,7 @@ jobs:
       - name: 🧰 Install JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 17
+          java-version: '1.8'
           distribution: temurin
           cache: gradle
       - name: 💪 Grant execute permission for gradlew
@@ -29,7 +29,7 @@ jobs:
       - name: 🧰 Install JDK
         uses: actions/setup-java@v4
         with:
-          java-version: 17
+          java-version: '1.8'
           distribution: temurin
           cache: gradle
       - name: 💪 Grant execute permission for gradlew
