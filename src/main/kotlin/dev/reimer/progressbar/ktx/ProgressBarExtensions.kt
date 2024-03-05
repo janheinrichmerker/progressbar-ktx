@@ -8,8 +8,9 @@ import java.util.*
 import java.util.stream.BaseStream
 import java.util.stream.Stream
 import kotlin.time.Duration
+import kotlin.time.DurationUnit
 import kotlin.time.ExperimentalTime
-import kotlin.time.microseconds
+import kotlin.time.toDuration
 
 @DslMarker
 annotation class ProgressBarDsl
@@ -27,9 +28,9 @@ class ProgressBarBuilderScope {
     var updateIntervalMillis: Int = 1000
     @ExperimentalTime
     var updateInterval: Duration
-        get() = updateIntervalMillis.microseconds
+        get() = updateIntervalMillis.toDuration(DurationUnit.MILLISECONDS)
         set(value) {
-            updateIntervalMillis = value.inMilliseconds.toInt()
+            updateIntervalMillis = value.inWholeMilliseconds.toInt()
         }
     var style: ProgressBarStyle = ProgressBarStyle.COLORFUL_UNICODE_BLOCK
     var consumer: ProgressBarConsumer = InternalConsoleProgressBarConsumer()
