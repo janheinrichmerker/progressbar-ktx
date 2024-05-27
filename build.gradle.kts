@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.24"
+    kotlin("jvm") version "2.0.0"
     `maven-publish`
     id("org.jetbrains.dokka") version "0.9.17"
     id("com.palantir.git-version") version "3.0.0"
