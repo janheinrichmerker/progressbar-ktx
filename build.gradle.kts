@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.1.20"
     `maven-publish`
     id("org.jetbrains.dokka") version "0.9.17"
-    id("com.palantir.git-version") version "3.1.0"
+    id("com.palantir.git-version") version "3.2.0"
 }
 
 val gitVersion: groovy.lang.Closure<String> by extra
